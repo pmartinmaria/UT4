@@ -1,0 +1,17 @@
+.img1 {
+  display: block;
+  margin: auto;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.img2 {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=HojaEstilos1.css.map */

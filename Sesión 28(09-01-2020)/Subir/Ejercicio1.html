@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1 de la Sesión 28</title>
+    <link rel="stylesheet" href="css/HojaEstilos1.css">
+</head>
+
+<body>
+    <h2>Figure y figcaption</h2>
+    <figure>
+        <img src="../img/img1.jpg" alt="Pies" title="Pies" class="img1">
+        <figcaption>Los pies</figcaption>
+    </figure>
+    <h2>Picture</h2>
+    <picture class="img2">
+        <source media="(min-width: 650px)" srcset="../img/img2.jpg">
+        <source media="(min-width: 465px)" srcset="../img/img3.jpg">
+        <img src="../img/img4.jpg" alt="Imagen retocompatible" title="Imagen retocompatible">
+    </picture>
+    <h2>Etiqueta audio</h2>
+    <audio id="audio1" controls>
+        <source src="../audio/La Gallina Turuleca - Canciones de la Granja de Zenón 1.mp3" type="audio/mpeg">
+        <source src="../audio/La Gallina Turuleca - Canciones de la Granja de Zenón 1.ogg" type="audio/ogg">
+        <source src="../audio/La Gallina Turuleca - Canciones de la Granja de Zenón 1.wav" type="audio/wav">
+    </audio>
+    <div>
+        <button onclick="document.getElementById('audio1').play()">Reproducir el Audio</button>
+        <button onclick="document.getElementById('audio1').pause()">Pausar el Audio</button>
+        <button onclick="document.getElementById('audio1').volume+=0.1">Aumentar el Volumen</button>
+        <button onclick="document.getElementById('audio1').volume-=0.1">Disminuir el Volumen</button> </div>
+</body>
+
+</html>

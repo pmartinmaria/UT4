@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2 - Sesión 29</title>
+    <link rel="stylesheet" href="css/HojaEstilos1.css">
+    <script>
+        function dibujarLinea() {
+            var canvasvar1 = document.getElementById('canvas1'); 
+            var contexto1 = canvasvar1.getContext("2d"); 
+            contexto1.moveTo(0, 0); 
+            contexto1.lineTo(300, 150);/*Eje x eje y*/ 
+            contexto1.lineTo(600, 0);/*Eje x eje y*/ 
+            contexto1.stroke();
+        }
+        function escribirTexto() {
+            var canvasvar1 = document.getElementById("canvas1"); 
+            var contexto1 = canvasvar1.getContext("2d"); 
+            contexto1.font = "30px Arial"; 
+            contexto1.fillText("Hola a la clase de DAW", 20, 60);/*x, y*/
+        }
+        function dibujarCirculo() {
+            var canvasvar1 = document.getElementById("canvas1"); 
+            var contexto1 = canvasvar1.getContext("2d"); 
+            contexto1.beginPath(); 
+            contexto1.arc(100, 50, 40, 0, 2 * Math.PI);/*Eje x, eje y, radio, inicio de la circunferencia (0) y final de la circunferencia(2*PI) (2*Math.PI*R es la longitud completa de la circunferencia*/ 
+            contexto1.stroke();
+        }
+        function imprimirImagen() {
+            var canvasvar1 = document.getElementById("canvas1"); 
+            var contexto1 = canvasvar1.getContext("2d"); 
+            var imagen1 = document.getElementById("img1"); 
+            contexto1.drawImage(imagen1, 5, 5); /*eje x, eje y*/
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Canvas es un elemento de línea -->
+    <canvas class="canvas1" id="canvas1" width="600" height="400"></canvas>
+    <br>
+    <button onclick="dibujarLinea()">Dibujar</button>
+    <button onclick="escribirTexto()">Escribir</button>
+    <button onclick="dibujarCirculo()">Dibujar circulo</button>
+    <button onclick="imprimirImagen()">Imprimir imagen</button>
+    <img src="../img/img4.jpg" id="img1" style="display: none;">
+</body>
+
+</html>
