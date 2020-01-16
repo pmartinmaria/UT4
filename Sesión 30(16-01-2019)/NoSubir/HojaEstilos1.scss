@@ -1,0 +1,91 @@
+%contenedor{
+    grid-template-columns: auto auto auto;
+    background-color: lightseagreen;
+    padding: 10px; 
+    margin-bottom: 10px;
+    column-gap: 5px; //Espacio entre columnas
+    row-gap: 5px; //Espacio entre filas
+}
+%elementoHijo{
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 2em;
+    background-color: turquoise;
+} 
+.contenedorGrid{
+    display: grid;
+    @extend %contenedor;
+    &__elementoGrid{
+        @extend %elementoHijo;
+    }
+    &__elementoGrid7{
+        @extend %elementoHijo;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+    &__elementoGrid9{
+        @extend %elementoHijo;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
+.contenedorInlineGrid{
+    display: inline-grid;
+    @extend %contenedor;
+    &__elementoGrid{
+        @extend %elementoHijo;
+    }
+}
+.contenedorGridColumns{
+    display: grid;
+    @extend %contenedor;
+    grid-template-columns: repeat(5,auto);
+    gap: 0;
+    box-sizing: border-box;
+    &__elementoGrid{
+        @extend %elementoHijo;
+    }
+}
+.contenedorGridRows{
+    display: grid;
+    @extend %contenedor;
+    gap: 0;
+    grid-template-rows: 200px 300px 100px;
+    &__elementoGrid{
+        @extend %elementoHijo;
+    }
+}
+@mixin justifyContent($valor) {
+    justify-content: $valor;
+}
+.contenedorJustifyContent{
+    display: grid;
+    @extend %contenedor;
+    grid-template-columns: 100px 200px 300px;
+    //@include justifyContent(end);
+    //@include justifyContent(center);
+    //@include justifyContent(start);
+    //@include justifyContent(space-betwenn);
+    //@include justifyContent(space-around);
+    @include justifyContent(space-evenly);
+    &__elementoHijo{
+        @extend %elementoHijo;
+    }
+}
+.contenedorAlignContent{
+    display: grid;
+    @extend %contenedor;
+    grid-template-columns: 100px 200px 300px;
+    min-height: 300px;
+    justify-content: center;
+    align-content: center;
+    &__elementoHijo{
+        @extend %elementoHijo;
+    }
+    &__elementoHijo4{
+        @extend %elementoHijo;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}

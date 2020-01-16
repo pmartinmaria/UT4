@@ -1,0 +1,61 @@
+.contenedorAlignContent, .contenedorJustifyContent, .contenedorGridRows, .contenedorGridColumns, .contenedorInlineGrid, .contenedorGrid {
+  grid-template-columns: auto auto auto;
+  background-color: lightseagreen;
+  padding: 10px;
+  margin-bottom: 10px;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.contenedorAlignContent__elementoHijo4, .contenedorAlignContent__elementoHijo, .contenedorJustifyContent__elementoHijo, .contenedorGridRows__elementoGrid, .contenedorGridColumns__elementoGrid, .contenedorInlineGrid__elementoGrid, .contenedorGrid__elementoGrid9, .contenedorGrid__elementoGrid7, .contenedorGrid__elementoGrid {
+  text-align: center;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 2em;
+  background-color: turquoise;
+}
+
+.contenedorGrid {
+  display: grid;
+}
+.contenedorGrid__elementoGrid7 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.contenedorGrid__elementoGrid9 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.contenedorInlineGrid {
+  display: inline-grid;
+}
+.contenedorGridColumns {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 0;
+  box-sizing: border-box;
+}
+.contenedorGridRows {
+  display: grid;
+  gap: 0;
+  grid-template-rows: 200px 300px 100px;
+}
+.contenedorJustifyContent {
+  display: grid;
+  grid-template-columns: 100px 200px 300px;
+  justify-content: space-evenly;
+}
+.contenedorAlignContent {
+  display: grid;
+  grid-template-columns: 100px 200px 300px;
+  min-height: 300px;
+  justify-content: center;
+  align-content: center;
+}
+.contenedorAlignContent__elementoHijo4 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/*# sourceMappingURL=HojaEstilos1.css.map */
