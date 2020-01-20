@@ -1,0 +1,66 @@
+%elementosHijo {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    background-color: #2196F3;
+    gap: 10px;
+    padding: 10px;
+
+    &__elementoHijo {
+        @extend %elementosHijo;
+    }
+
+    &__elemento1 {
+        @extend %elementosHijo;
+        grid-column: 1/4;
+        grid-row: 1/3;
+    }
+
+    &__elemento4 {
+        @extend %elementosHijo;
+        grid-row: 3/5;
+    }
+
+    &__elemento6 {
+        @extend %elementosHijo;
+        grid-area: 3/3/5/5;
+        /*grid-row-start, grid-column-start, grid-row-end y grid-column-end*/
+    }
+
+    &__elem1 {
+        @extend %elementosHijo;
+        grid-area: 1 / 3 / 2 / 5;
+    }
+
+    &__elem2 {
+        @extend %elementosHijo;
+        grid-area: 2 / 3 / 3 / 5;
+    }
+
+    &__elem3 {
+        @extend %elementosHijo;
+        grid-area: 1/1/2/2;
+    }
+
+    &__elem4 {
+        @extend %elementosHijo;
+        grid-area: 1/2/2/3;
+    }
+
+    &__elem5 {
+        @extend %elementosHijo;
+        grid-area: 2/1/3/2;
+    }
+
+    &__elem6 {
+        @extend %elementosHijo;
+        grid-area: 2/2/3/3;
+    }
+}

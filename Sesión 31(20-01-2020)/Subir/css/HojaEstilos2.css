@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body .imagenResponsivaMaxWidth {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+body .contenedorImagen {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  width: 70%;
+  height: 500px;
+  background-repeat: no-repeat;
+  border: 3px solid black;
+  background-size: contain;
+  background-color: red;
+  background-image: url("../img4.png");
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  background-color: lightblue;
+  gap: 10px;
+}
+.contenedor__elementoHijo__imagen1 {
+  width: 100%;
+  height: auto;
+}
+
+.pruebaObjectFit {
+  width: 400px;
+  height: 800px;
+}
+.pruebaObjectFit .img1 {
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=hojaestilos2.css.map */
